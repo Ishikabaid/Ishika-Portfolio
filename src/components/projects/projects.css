@@ -1,5 +1,5 @@
 .projects-container {
-    grid-template-columns: repeat(3, 270px);
+    grid-template-columns: repeat(4, 270px);
     justify-content: center;
     column-gap: 1.8rem;
 }
@@ -7,7 +7,9 @@
 .projects-content {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to right, rgb(249, 201, 210), rgb(246, 255, 151));
     padding: 6rem 0 2rem 2.5rem;
+    border-radius: 1rem;
 }
 
 .projects-img {
@@ -22,7 +24,7 @@
 }
 
 .projects-button {
-    color: palevioletred;
+    color: rgb(216, 8, 78);
     font-size: var(--small-font-size);
     display: inline-flex;
     align-items: center;
@@ -35,6 +37,84 @@
     transition: 0.3s;
 }
 
-.projects-modal {
-    display: none;
+.projects-button:hover .projects-button-icon {
+    transform: translateX(00.25rem);
 }
+
+.projects-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: var(--z-modal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.projects-modal-content {
+    width: 500px;
+    position: relative;
+    padding: 4.5rem 2.5rem 2.5rem;
+    background-color: white;
+    border-radius: 1.5rem;
+}
+
+.projects-modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.projects-modal-title,
+.projects-modal-description {
+    text-align: center;  
+}
+
+.projects-modal-title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+.projects-modal-description {
+    font-size: var(--small-font-size);
+    padding: 0 3.5rem;
+    margin-bottom: var(--mb-2);
+}
+
+.projects-modal-projects {
+    row-gap: 0.75rem;
+}
+
+.projects-modal-project {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.projects-modal-icon {
+    font-size: 1.1rem;
+}
+
+.projects-modal-info {
+    font-size: var(--small-font-size);
+}
+
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.link {
+    color: blue;
+}
+
