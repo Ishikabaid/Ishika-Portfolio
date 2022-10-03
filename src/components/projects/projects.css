@@ -1,5 +1,5 @@
 .projects-container {
-    grid-template-columns: repeat(4, 270px);
+    grid-template-columns: repeat(4, 240px);
     justify-content: center;
     column-gap: 1.8rem;
 }
@@ -116,5 +116,39 @@
 
 .link {
     color: blue;
+}
+
+
+@media screen and (max-width: 992px) {
+   .projects-container {
+    grid-template-columns: repeat(4, 170px);
+   }
+}
+  
+@media screen and (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+@media screen and (max-width: 576px) {
+    .projects-modal-content {
+        padding: 4.5rem 1.5rem 2.5rem;
+    }
+
+    .projects-modal-description {
+        padding: 0;
+    }
+    
+}
+  
+@media screen and (max-width: 350px) {
+    .projects-container {
+        grid-template-columns: max-content;
+    }
+
+    .projects-content {
+        padding-right: 6rem;
+    }
 }
 
